@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>FIFA 23 - Videojuego</title>
+	<style>
+		body {
+			background-color: #000;
+			font-family: Arial, sans-serif;
+			color: #fff;
+			margin: 0;
+			padding: 0;
+		}
+
+		header {
+			background-color: #333;
+			padding: 20px;
+			text-align: center;
+		}
+
+		h1 {
+			font-size: 48px;
+			margin: 0;
+			color: #fff;
+			text-shadow: 2px 2px #000;
+		}
+
+		h2 {
+			font-size: 32px;
+			margin-top: 20px;
+			margin-bottom: 10px;
+			text-align: center;
+			color: #fff;
+			text-shadow: 1px 1px #000;
+		}
+
+		p {
+			margin: 0;
+			line-height: 1.5;
+			text-align: justify;
+			padding: 20px;
+		}
+
+		section {
+			margin: 20px auto;
+			max-width: 800px;
+		}
+
+		section h2 {
+			margin-bottom: 30px;
+		}
+
+		section p {
+			font-size: 18px;
+		}
+
+		footer {
+			background-color: #333;
+			padding: 20px;
+			text-align: center;
+			font-size: 14px;
+		}
+
+		.m_button {
+			display: inline-block;
+			padding: 10px 20px;
+			background-color: #FFD700;
+			color: #000;
+			border-radius: 5px;
+			text-decoration: none;
+			text-align: center;
+			font-weight: bold;
+			transition: background-color 0.3s;
+		}
+
+		.m_button:hover {
+			background-color: #FFC500;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>FIFA 23</h1>
+		<h2>¡EA Sports, it's in the game!</h2>
+	</header>
+
+	<section>
+		<h2>Reseña</h2>
+		<p>FIFA 23 es un videojuego de simulación de fútbol publicado por Electronic Arts. Es la trigésima entrega de la serie FIFA desarrollada por EA Sports, y la última entrega bajo el estandarte de FIFA!</p>
+		<h2>Calificación: 11/10</h2>
+	</section>
+
+	<center>
+		<div style="display: flex; justify-content: center; align-items: center;">
+            <marquee behavior="scroll" direction="right" >
+            <img id="miImagen" src="D:\html\img\fifa.jpg" style="margin-right: 10px;" width="700" height="500">
+             <!--<<img src="D:\html\img\fifa2.jpg" style="margin-right: 10px;" width="700" height="500">
+            <img src="D:\html\img\fifa3.jpg" style="margin-right: 10px;" width="700" height="500">
+            <img src="D:\html\img\fifa4.jpg" style="margin-right: 10px;" width="700" height="500">
+            <img src="D:\html\img\fifa5.jpg" style="margin-right: 10px;" width="700" height="500"> -->
+        </marquee>
+        </div>
+		<br>
+		<br>
+   
+
+		<a href="#m__" class="m_button" rel="noreferrer" onclick="cambiarColorFondo()">Cambiar color de fondo</a>
+        <a href="#m__" class="m_button" rel="noreferrer" onclick="cambiarTexto()">Cambiar texto</a>
+        <a href="#m__" class="m_button" rel="noreferrer" onclick="cambiarImagen()">Cambiar imagen</a>
+        <a href="#m__" class="m_button" rel="noreferrer" onclick="restaurarImagen()">Restaurar imagen</a>
+        <a href="#m__" class="m_button" rel="noreferrer"   onclick="ocultarMensaje()">Ocultar mensaje</a>
+        <a href="#m__" class="m_button" rel="noreferrer"   onclick="escribirTexto()">Escribir mensaje</a>
+      
+	</center>
+
+	<footer>
+        <center>
+            <center><p id="FIFAA">Bienvenido</p></center>
+            <h2 id="mensaje">Hola mundo</h2>
+            <h1> Ejemplo de mensaje</h1>
+            <div id="miDiv"></div>
+        </center>
+		
+	</footer>
+
+
+    <script>
+    function cambiarColorFondo() {
+        var body = document.body;
+      
+        // Genera un color aleatorio en formato hexadecimal
+        var color = '#' + Math.floor(Math.random() * 16777215).toString(16);
+        body.style.backgroundColor = color;
+      }
+
+      function cambiarTexto() {
+  var parrafo = document.getElementById("FIFAA");
+  var nuevoTexto = "© 2023 EA. Todos los derechos reservados.";
+  parrafo.textContent = nuevoTexto;
+}
+
+var imagenOriginal;
+
+window.onload = function() {
+  // Al cargar la página, guarda el src original de la imagen
+  var imagen = document.getElementById("miImagen");
+  imagenOriginal = imagen.src;
+};
+
+function cambiarImagen() {
+  var imagen = document.getElementById("miImagen");
+  imagen.src = "fifa5.jpg";
+}
+
+function restaurarImagen() {
+  var imagen = document.getElementById("miImagen");
+  imagen.src = imagenOriginal;
+}
+
+function ocultarMensaje() {
+  var mensaje = document.getElementById("mensaje");
+  mensaje.style.display = "none";
+}
+
+function escribirTexto() {
+  var miDiv = document.getElementById("miDiv");
+
+  var h1 = document.createElement("h1");
+  h1.textContent = "Este texto no lo escribió Alejandro, lo escribió JavaScript";
+
+  miDiv.appendChild(h1);
+}
+
+      </script>
+</body>
+</html>
+
+
+
